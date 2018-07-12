@@ -53,6 +53,8 @@ def get_times_from_cli(cli_token):
 
     """
     today = datetime.date.today()
+    print("Hoy: {}".format(today))
+    print("14 dias: {}".format(dateutil.relativedelta.relativedelta(days=14)))
 
     if cli_token=="thisday":
         return today, today
