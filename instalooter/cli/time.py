@@ -57,7 +57,7 @@ def get_times_from_cli(cli_token):
     if cli_token=="thisday":
         return today, today
     elif cli_token=="thisweek":
-        return today, today - dateutil.relativedelta.relativedelta(days=7)
+        return today, today - dateutil.relativedelta.relativedelta(days=12)
     elif cli_token=="thismonth":
         return today, today - dateutil.relativedelta.relativedelta(months=1)
     elif cli_token=="thisyear":
