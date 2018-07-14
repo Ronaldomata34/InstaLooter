@@ -54,12 +54,12 @@ def get_times_from_cli(cli_token):
     """
     today = datetime.date.today()
     print("Hoy: {}".format(today))
-    print("14 dias: {}".format(dateutil.relativedelta.relativedelta(days=14)))
+    print("Desde: {}".format(today - dateutil.relativedelta.relativedelta(days=14)))
 
     if cli_token=="thisday":
         return today, today
     elif cli_token=="thisweek":
-        return today, today - dateutil.relativedelta.relativedelta(days=12)
+        return today, today - dateutil.relativedelta.relativedelta(days=14)
     elif cli_token=="thismonth":
         return today, today - dateutil.relativedelta.relativedelta(months=1)
     elif cli_token=="thisyear":
