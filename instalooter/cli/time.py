@@ -52,9 +52,9 @@ def get_times_from_cli(cli_token):
         `ISO-8601 specification <https://en.wikipedia.org/wiki/ISO_8601>`_.
 
     """
-    today = datetime.date.today() - dateutil.relativedelta.relativedelta(days=7)
+    today = datetime.date.today() - dateutil.relativedelta.relativedelta(days=2)
     print("Hoy: {}".format(today))
-    print("Desde: {}".format(today - dateutil.relativedelta.relativedelta(days=14)))
+    print("Desde: {}".format(today - dateutil.relativedelta.relativedelta(days=15)))
 
     if cli_token=="thisday":
         return today, today
